@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+      <!-- Replace the content tag with appropriate information -->
+      <meta name="description" content="DESCRIPTION META TAG">
+      <meta property="og:title" content="Generating Compositional Scenes via Text-to-image RGBA Instance Generation"/>
+      <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+      <meta property="og:url" content="URL OF THE WEBSITE"/>
+      <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+      <meta property="og:image" content="static/image/your_banner_image.png" />
+      <meta property="og:image:width" content="1200"/>
+      <meta property="og:image:height" content="630"/>
+      <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+      <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+      <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+      <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+      <meta name="twitter:card" content="summary_large_image">
+      <!-- Keywords for your paper to be indexed by-->
+      <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>MuLAn Dataset</title>
+      <!--   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+      <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+         rel="stylesheet">
+      <link rel="stylesheet" href="static/css/bulma.min.css">
+      <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+      <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+      <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+      <link rel="stylesheet"
+         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+      <link rel="stylesheet" href="static/css/index.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+      <script defer src="static/js/fontawesome.all.min.js"></script>
+      <script src="static/js/bulma-carousel.min.js"></script>
+      <script src="static/js/bulma-slider.min.js"></script>
+      <script src="static/js/index.js"></script>
+      <script src="static/js/carousel-coco.js"></script>
+      <script src="static/js/carousel-laion.js"></script>
+   </head>
+   <body>
+      <section class="hero">
+         <div class="hero-body">
+            <div class="container is-max-desktop">
+               <div class="columns is-centered">
+                  <div class="column has-text-centered">
+                     <h1 class="title is-2 publication-title">Generating Compositional Scenes via Text-to-image
+                        RGBA Instance Generation
+                     </h1>
+                     <h1 class="title is-2 publication-title">NeurIPS 2024</h1>
+                     <div class="is-size-5 publication-authors">
+                        <!-- Paper authors -->
+                        <span class="author-block">
+                        <a href="https://www.linkedin.com/in/alessandro-fontanella-4233b315a/" target="_blank">Alessandro Fontanella</a><sup> 1</sup>,</span>
+                        <span class="author-block">
+                        <a href="https://uk.linkedin.com/in/petru-daniel-tudosiu" target="_blank">Petru-Daniel Tudosiu</a><sup> 2</sup>,</span>
+                        <span class="author-block">
+                        <a href="http://yang.ac/" target="_blank">Yongxin Yang</a><sup>2</sup>,</span>
+                        <span class="author-block">
+                        <a href="https://github.com/zsffq999" target="_blank">Shifeng Zhang</a><sup>2</sup>,</span>
+                        <span class="author-block">
+                        <a href="https://parisots.github.io" target="_blank">Sarah Parisot</a><sup>3</sup>
+                        </span>
+                     </div>
+                     <div class="is-size-5 publication-authors">
+                        <span class="author-block">
+                           <sup>1</sup> University of Edinburgh, <sup>2</sup> Huawei Noah's Ark Lab, <sup>3</sup> Microsoft Research<br>
+                           <!--                      Conference name and year-->
+                        </span>
+                        <span class="eql-cntrb"><small><br><sup>*</sup>Work done while at Huawei</small></span>
+                     </div>
+                     <div class="column has-text-centered">
+                        <div class="publication-links">
+                           <!-- CVPR link -->
+                           <span class="link-block">
+                           <a href="https://openreview.net/pdf?id=MwFeh4RqvA" target="_blank"
+                              class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                           <i class="fas fa-file-pdf"></i>
+                           </span>
+                           <span>Paper</span>
+                           </a>
+                           </span>
+                           <span class="link-block">
+                              <a href="https://mulan-dataset.github.io/" target="_blank"
+                                 class="external-link button is-normal is-rounded is-dark">
+                              <span class="icon">
+                              <i class="fas fa-file-pdf"></i>
+                              </span>
+                              <span>MuLAn Dataset</span>
+                              </a>
+                           </span>
+                           <!-- Supplementary PDF link -->
+                           <!--                    <span class="link-block">-->
+                           <!--                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"-->
+                           <!--                      class="external-link button is-normal is-rounded is-dark">-->
+                           <!--                      <span class="icon">-->
+                           <!--                        <i class="fas fa-file-pdf"></i>-->
+                           <!--                      </span>-->
+                           <!--                      <span>Supplementary</span>-->
+                           <!--                    </a>-->
+                           <!--                  </span>-->
+                           <!-- ArXiv abstract Link -->
+                           </a>
+                           </span>
+                           </a>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Teaser video-->
+      <section class="hero teaser">
+         <div class="container is-max-desktop" style="text-align: center;">
+            <div class="hero-body">
+               <div>
+                 <input type="checkbox" id="popup-toggle" style="display: none;">
+
+<!-- Thumbnail image with label to trigger the popup -->
+<label for="popup-toggle">
+    <img src="static/images/drawing.png" alt="Drawing Thumbnail" class="popup-thumbnail">
+</label>
+
+<!-- Popup overlay with the larger image and close button -->
+<div class="popup-overlay">
+    <label for="popup-toggle" class="close-btn">✕</label>
+    <img src="static/images/drawing.png" alt="Drawing Popup Image">
+</div>
+               </div>
+               <br><br>
+               <h2 class="subtitle has-text-centered">
+                  Our approach allows to build and manipulate images from highly complex prompts with finegrained control over object appearance and location, granting a higher degree of control than competing methods.
+               </h2>
+            </div>
+         </div>
+      </section>
+      <!-- End teaser video -->
+      <!-- Paper abstract -->
+      <section class="section hero is-light">
+         <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+               <div class="column is-four-fifths">
+                  <h2 class="title is-3">Abstract</h2>
+                  <div class="content has-text-justified">
+                     <p>
+                        Text-to-image diffusion generative models can generate high quality images at the cost of tedious prompt engineering. Controllability can be improved by introducing layout conditioning, however existing methods lack layout editing ability and finegrained control over object attributes. The concept of multi-layer generation holds great potential to address these limitations, however generating image instances concurrently to scene composition limits control over fine-grained object attributes, relative positioning in 3D space and scene manipulation abilities. In this work, we propose a novel multi-stage generation paradigm that is designed for fine-grained control, flexibility and interactivity. To ensure control over instance attributes, we devise a novel training paradigm to adapt a diffusion model to generate isolated scene components as RGBA images with transparency information. To build complex images, we employ these pre-generated instances and introduce a multilayer composite generation process that smoothly assembles components in realistic scenes. Our experiments show that our RGBA diffusion model is capable of generating diverse and high quality instances with precise control over object attributes. Through multi-layer composition, we demonstrate that our approach allows to build and manipulate images from highly complex prompts with finegrained control over object appearance and location, granting a higher degree of control than competing methods.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- End paper abstract -->
+      <br>
+      <!-- Image carousel -->
+      <h1 style="text-align: center; font-size: 200% !important;">RGBA Samples</h1>
+      <br><br>
+      <div class="slider-coco">
+         <div class="slides-coco">
+            <div class="slidec"><img src="static/images/C1.png" alt="Image 1"></div>
+            <div class="slidec"><img src="static/images/C2.png" alt="Image 2"></div>
+            <div class="slidec"><img src="static/images/C3.png" alt="Image 3"></div>
+            <div class="slidec"><img src="static/images/C4.png" alt="Image 4"></div>
+            <div class="slidec"><img src="static/images/C5.png" alt="Image 5"></div>
+            <div class="slidec"><img src="static/images/C6.png" alt="Image 6"></div>
+            <div class="slidec"><img src="static/images/C7.png" alt="Image 7"></div>
+            <div class="slidec"><img src="static/images/C8.png" alt="Image 8"></div>
+            <div class="slidec"><img src="static/images/C9.png" alt="Image 9"></div>
+            <div class="slidec"><img src="static/images/C10.png" alt="Image 10"></div>
+            <div class="slidec"><img src="static/images/C11.png" alt="Image 11"></div>
+            <div class="slidec"><img src="static/images/C12.png" alt="Image 12"></div>
+            <div class="slidec"><img src="static/images/C13.png" alt="Image 13"></div>
+            <div class="slidec"><img src="static/images/C14.png" alt="Image 14"></div>
+            <div class="slidec"><img src="static/images/C15.png" alt="Image 15"></div>
+            <div class="slidec"><img src="static/images/C16.png" alt="Image 16"></div>
+            <div class="slidec"><img src="static/images/C17.png" alt="Image 17"></div>
+            <div class="slidec"><img src="static/images/C18.png" alt="Image 18"></div>
+            <div class="slidec"><img src="static/images/C19.png" alt="Image 19"></div>
+            <div class="slidec"><img src="static/images/C20.png" alt="Image 20"></div>
+         </div>
+         <a class="prev" onclick="changeSlide(-1)">❮</a>
+         <a class="next" onclick="changeSlide(1)">❯</a>
+      </div>
+      <div class="dots_c">
+         <span class="dot_c" onclick="currentSlide(0)"></span>
+         <span class="dot_c" onclick="currentSlide(1)"></span>
+         <span class="dot_c" onclick="currentSlide(2)"></span>
+         <span class="dot_c" onclick="currentSlide(3)"></span>
+         <span class="dot_c" onclick="currentSlide(4)"></span>
+         <span class="dot_c" onclick="currentSlide(5)"></span>
+         <span class="dot_c" onclick="currentSlide(6)"></span>
+         <span class="dot_c" onclick="currentSlide(7)"></span>
+         <span class="dot_c" onclick="currentSlide(8)"></span>
+         <span class="dot_c" onclick="currentSlide(9)"></span>
+         <span class="dot_c" onclick="currentSlide(10)"></span>
+         <span class="dot_c" onclick="currentSlide(11)"></span>
+         <span class="dot_c" onclick="currentSlide(12)"></span>
+         <span class="dot_c" onclick="currentSlide(13)"></span>
+         <span class="dot_c" onclick="currentSlide(14)"></span>
+         <span class="dot_c" onclick="currentSlide(15)"></span>
+         <span class="dot_c" onclick="currentSlide(16)"></span>
+         <span class="dot_c" onclick="currentSlide(17)"></span>
+         <span class="dot_c" onclick="currentSlide(18)"></span>
+         <span class="dot_c" onclick="currentSlide(19)"></span>
+      </div>
+      <!-- End image carousel -->
+      <br><br>
+      <!-- Image carousel -->
+      <div class="carousel-laion">
+         <h1 style="text-align: center; color: black; font-size: 200% !important;">Scenes Samples</h1>
+         <br><br>
+         <div class="slider-laion">
+            <div class="slides-laion">
+               <div class="slide-laion"><img src="static/images/S1.png" alt="Image 1"></div>
+               <div class="slide-laion"><img src="static/images/S2.png" alt="Image 2"></div>
+               <div class="slide-laion"><img src="static/images/S3.png" alt="Image 3"></div>
+               <div class="slide-laion"><img src="static/images/S3.png" alt="Image 4"></div>
+               <div class="slide-laion"><img src="static/images/S4.png" alt="Image 5"></div>
+               <div class="slide-laion"><img src="static/images/S5.png" alt="Image 6"></div>
+               <div class="slide-laion"><img src="static/images/S6.png" alt="Image 7"></div>
+               <div class="slide-laion"><img src="static/images/S7.png" alt="Image 8"></div>
+               <div class="slide-laion"><img src="static/images/S8.png" alt="Image 9"></div>
+            </div>
+            <a class="prevl" onclick="changeSlidel(-1)">❮</a>
+            <a class="nextl" onclick="changeSlidel(1)">❯</a>
+         </div>
+         <div class="dots">
+            <span class="dot" onclick="currentSlidel(0)"></span>
+            <span class="dot" onclick="currentSlidel(1)"></span>
+            <span class="dot" onclick="currentSlidel(2)"></span>
+            <span class="dot" onclick="currentSlidel(3)"></span>
+            <span class="dot" onclick="currentSlidel(4)"></span>
+            <span class="dot" onclick="currentSlidel(5)"></span>
+            <span class="dot" onclick="currentSlidel(6)"></span>
+            <span class="dot" onclick="currentSlidel(7)"></span>
+            <span class="dot" onclick="currentSlidel(8)"></span>
+         </div>
+      </div>
+      <!-- End image carousel -->
+      <section class="hero is-small">
+         <div class="hero-body">
+            <div class="container " style="text-align: center;">
+               <h2 class="title is-3">RGBA VAE Design & Training</h2>
+               <p style="margin-bottom:1cm;">
+                  A few modifications were made to the PixArt-Alpha VAE to make it compatible with RGBA images. Firstly, the additional channel is simply taken into account by replacing and retraining the input and output layers of the model. Secondly, we observed that learning a joint RGBA latent space leads to entanglement of RGB and alpha channels, affecting generation capability of diffusion models trained in this latent space. We address this challenge by disentangling representations in the latent space: our VAE predicts two separate distributions [EQ1] and [EQ2], each associated with a separate KL loss.
+               </p>
+               <div>
+                  <input type="checkbox" id="popup-toggle-rgba" style="display: none;">
+
+<!-- Thumbnail image with label to trigger the popup -->
+<label for="popup-toggle-rgba">
+    <img src="static/images/vae.png" class="popup-thumbnail-rgba">
+</label>
+
+<!-- Popup overlay with the larger image and close button -->
+<div class="popup-overlay-rgba">
+    <label for="popup-toggle-rgba" class="close-btn">✕</label>
+    <img loading="lazy" src="static/images/vae.png" alt="vae" />
+</div>
+                  
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="hero is-small">
+         <div class="hero-body">
+            <div class="container " style="text-align: center;">
+               <h2 class="title is-3">RGBA LDM Sampling Strategy</h2>
+               <p style="margin-bottom:1cm;">
+                  In our case, the latent space also encodes information on the transparency layer. When sampling from our model, we seek to exploit the mutual dependency between RGB and alpha channels. In particular, given RGB and Alpha noised latents at timestep t, information contained in the RGB noised latents at timestep t-1 could be employed to inform the Alpha noised latents update from timestep t to t-1.
+               </p>
+                <div>
+                  <input type="checkbox" id="popup-toggle-ldm" style="display: none;">
+
+<!-- Thumbnail image with label to trigger the popup -->
+<label for="popup-toggle-ldm">
+    <img src="static/images/ldm.png" class="popup-thumbnail-ldm">
+</label>
+
+<!-- Popup overlay with the larger image and close button -->
+<div class="popup-overlay-ldm">
+    <label for="popup-toggle-ldm" class="close-btn">✕</label>
+    <img loading="lazy" src="static/images/ldm.png" alt="vae" />
+</div>
+                  
+               </div>
+               <br>
+               <p style="margin-bottom:1cm;">
+                  We can observe that our approach is able to generate realistic instances following the instructions given. Text2Layer shows lower image quality and excessive transparency, while LayerDiffusion struggles to
+                  follow prompt details, such as image style. Combining SD with Matting allows to achieve reasonable segmentation of the instances generated, while when applied to PixArt-α it can sometimes struggle to correctly identify and segment the main object of the image, especially when dealing with artwork content. On top of attributes bleeding in the background, this highlights how unreliable matting can be for instance generation purposes.
+               </p>
+                <div>
+                  <input type="checkbox" id="popup-toggle-rgba-samples" style="display: none;">
+
+<!-- Thumbnail image with label to trigger the popup -->
+<label for="popup-toggle-rgba-samples">
+    <img src="static/images/rgba_samples.png" class="popup-thumbnail-rgba-samples">
+</label>
+
+<!-- Popup overlay with the larger image and close button -->
+<div class="popup-overlay-rgba-samples">
+    <label for="popup-toggle-rgba-samples" class="close-btn">✕</label>
+    <img loading="lazy" src="static/images/rgba_samples.png" alt="vae" />
+</div>
+                  
+               </div>
+               
+            </div>
+         </div>
+      </section>
+      <br>
+      <section class="hero is-small">
+         <div class="hero-body">
+            <div class="container " style="text-align: center;">
+               <h2 class="title is-3">Multi-Layer Noise Blending for Scene Composition</h2>
+               <p style="margin-bottom:1cm;">
+                  We consider that we have an image layout available, and generated instances based on our RGBA generator. The layout is represented by a collection of bounding boxes. Our scene composition approach is designed as a multi-layer noise blending process, where instances are sequentially integrated into intermediate layered representations. While we generate K+1 images, where K is the number of instances and we also account for the background, we observed that generating layered images affords more flexibility, better control over relative positions of instances and yields more natural compositions.
+               </p>
+               <br>
+               <div>
+                   <input type="checkbox" id="popup-toggle-noise" style="display: none;">
+
+<!-- Thumbnail image with label to trigger the popup -->
+<label for="popup-toggle-noise">
+    <img src="static/images/noise_blending.png" class="popup-thumbnail-noise">
+</label>
+
+<!-- Popup overlay with the larger image and close button -->
+<div class="popup-overlay-noise">
+    <label for="popup-toggle-noise" class="close-btn">✕</label>
+    <img loading="lazy" src="static/images/noise_blending.png" alt="vae" />
+</div>
+                 
+               </div>
+               <br>
+               <p style="margin-bottom:1cm;">
+                  While GLIGEN is capable of accurately reproducing the desired layout, it often fails to assign the right attributes to objects and struggles with highly overlapping objects. In contrast, Multidiffusion is more accurate in terms of attribute assignments, but struggles to handle overlapping objects. This can be attributed to the noise averaging process, which fails to integrate a notion of instance ordering like our multi-layer approach. Instance diffusion achieves performance closest to ours, but still struggles with complex patterns, attributes and relative positioning. With our RGBA instance generation and multi-layer noise blending, we are able to accurately assign object attributes and follow the required layout, while successfully building smooth and realistic scenes.
+               </p>
+               <div>
+                    <input type="checkbox" id="popup-toggle-scenes" style="display: none;">
+
+<!-- Thumbnail image with label to trigger the popup -->
+<label for="popup-toggle-scenes">
+    <img src="static/images/scenes.png" class="popup-thumbnail-scenes">
+</label>
+
+<!-- Popup overlay with the larger image and close button -->
+<div class="popup-overlay-scenes">
+    <label for="popup-toggle-scenes" class="close-btn">✕</label>
+    <img loading="lazy" src="static/images/scenes.png" alt="vae" />
+</div>
+                  
+               </div>
+            </div>
+         </div>
+         <div class="hero-body">
+            <div class="container " style="text-align: center;">
+               <h2 class="title is-3">Scene Manipulation</h2>
+               <p style="margin-bottom:1cm;">
+                  The manipulations we consider here are: attribute modification, instance replacement, and layout adjustment. We note that the first two tasks require RGBA generation of new instances. We highlight that we do not introduce any new explicit scene preservation or image editing technology in this experiment, therefore evaluating our method’s potential for scene manipulation and controllability. We are able to control and modify image content easily while maintaining strong consistency across different versions of the scene, without explicitly enforcing content preservation. This highlights the strong potential of multi-layer approaches to facilitate the development of image editing methods. We can see that we achieve substantially stronger scene preservation compared to instance diffusion, which can generate entirely different images and instances when modifications are too strong.
+               </p>
+               <div>
+                   <div>
+                    <input type="checkbox" id="popup-toggle-edit" style="display: none;">
+
+<!-- Thumbnail image with label to trigger the popup -->
+<label for="popup-toggle-edit">
+    <img src="static/images/scene_editing.png" class="popup-thumbnail-edit">
+</label>
+
+<!-- Popup overlay with the larger image and close button -->
+<div class="popup-overlay-edit">
+    <label for="popup-toggle-edit" class="close-btn">✕</label>
+    <img loading="lazy" src="static/images/scene_editing.png" alt="vae" />
+</div>
+                  
+               </div>
+                 
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--&lt;!&ndash; Youtube video &ndash;&gt;-->
+      <!--<section class="hero is-small is-light">-->
+      <!--  <div class="hero-body">-->
+      <!--    <div class="container">-->
+      <!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
+      <!--      <h2 class="title is-3">Video Presentation</h2>-->
+      <!--      <div class="columns is-centered has-text-centered">-->
+      <!--        <div class="column is-four-fifths">-->
+      <!--          -->
+      <!--          <div class="publication-video">-->
+      <!--            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
+      <!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+      <!--          </div>-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--</section>-->
+      <!--&lt;!&ndash; End youtube video &ndash;&gt;-->
+      <!--&lt;!&ndash; Paper poster &ndash;&gt;-->
+      <!--<section class="hero is-small is-light">-->
+      <!--  <div class="hero-body">-->
+      <!--    <div class="container">-->
+      <!--      <h2 class="title">Poster</h2>-->
+      <!--      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">-->
+      <!--          </iframe>-->
+      <!--        -->
+      <!--      </div>-->
+      <!--    </div>-->
+      <!--  </section>-->
+      <!--&lt;!&ndash;End paper poster &ndash;&gt;-->
+      <!--BibTex citation -->
+      <section class="section" id="BibTeX">
+         <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>@inproceedings{
+    Fontanella_NeurIPS_2024_RGBA_Scene,
+    title     = {Generating compositional scenes via Text-to-image {RGBA} Instance Generation},
+    author    = {Alessandro Fontanella and Petru-Daniel Tudosiu and Yongxin Yang and Shifeng Zhang and Sarah Parisot},
+    booktitle = {The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+    year      = {2024},
+    url       = {https://openreview.net/forum?id=MwFeh4RqvA}
+}</code></pre>
+         </div>
+      </section>
+      <!--End BibTex citation -->
+      <footer class="footer">
+         <div class="container">
+            <div class="columns is-centered">
+               <div class="column is-8">
+                  <div class="content">
+                     <p>
+                        This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                        You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                        Commons Attribution-ShareAlike 4.0 International License</a>.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Statcounter tracking code -->
+      <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+      <!-- End of Statcounter Code -->
+      <script>
+         document.addEventListener('DOMContentLoaded', (event) => {
+         let images = ['static/images/banner_1.png', 'static/images/banner_2.png', 'static/images/banner_3.png', 'static/images/banner_4.png']; // Paths to your images
+         let currentIndex = 0;
+         
+         setInterval(() => {
+             currentIndex++;
+             if (currentIndex >= images.length) currentIndex = 0; // Loop back to the first image
+             document.getElementById('banner_sliding').src = images[currentIndex];
+         }, 1000); // Change image every 1 second
+         });
+         
+         document.addEventListener('DOMContentLoaded', (event) => {
+           let images = ['static/images/method_1.png', 'static/images/method_2.png', 'static/images/method_3.png']; // Paths to your images
+           let currentIndex = 0;
+         
+           setInterval(() => {
+               currentIndex++;
+               if (currentIndex >= images.length) currentIndex = 0; // Loop back to the first image
+               document.getElementById('method_sliding').src = images[currentIndex];
+           }, 2000); // Change image every 2 seconds
+         });
+      </script>
+   </body>
+</html>

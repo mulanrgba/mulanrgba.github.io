@@ -1,0 +1,761 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.button.is-rounded {
+margin-right: 10px !important;
+
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+.slider-pagination .slider-page {
+  background: #000000;
+}
+
+.eql-cntrb { 
+  font-size: smaller;
+}
+
+
+/* CAROUSEL CSS RGBA Samples */
+
+/* Slider Container */
+        .slider-coco {
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            width: 17.5%;
+        }
+
+        /* Slides */
+        .slides-coco{
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Individual Slide */
+        .slidec{
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Image with rounded corners */
+        .slidec img {
+            width: 100%;
+            display: block;
+            
+        }
+
+        /* Navigation Buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+            user-select: none;
+            text-decoration: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 10px;
+        }
+
+        /* Position the "prev button" to the left */
+        .prev {
+            left: 10px;
+        }
+
+        /* On hover, add a lighter background color to the buttons */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Navigation Dots */
+        .dots_c {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .dot_c {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #f5f5f5;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .dot_c.active {
+            background-color: #b7b5b5;
+        }
+
+
+  /* LAION CAROUSEL CSS */
+    
+        /* Slider Container */
+        .slider-laion {
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            width: 50%;
+        }
+
+        /* Slides */
+        .slides-laion {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Individual Slide */
+        .slide-laion {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Image with rounded corners */
+        .slide-laion img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* Navigation Buttons */
+        .prevl, .nextl {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+            user-select: none;
+            text-decoration: none;
+        }
+
+        /* Position the "next button" to the right */
+        .nextl {
+            right: 10px;
+        }
+
+        /* Position the "prev button" to the left */
+        .prevl {
+            left: 10px;
+        }
+
+        /* On hover, add a lighter background color to the buttons */
+        .prevl:hover, .nextl:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Navigation Dots */
+        .dots {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #f5f5f5;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .dot.active {
+            background-color: #b7b5b5;
+        }
+
+
+
+.title.is-3 {
+text-align: center;
+
+}
+
+/* Popup Image 1 */
+
+   /* Thumbnail image styling */
+        .popup-thumbnail {
+            width: 70%;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border-radius: 8px;
+        }
+
+        /* Slight zoom effect on hover */
+        .popup-thumbnail:hover {
+            transform: scale(1.05);
+        }
+
+        /* Popup overlay styling */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* Popup image styling */
+        .popup-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            background-color: white;
+        }
+
+        /* Close button styling */
+        .popup-overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            transition: background 0.3s;
+        }
+
+        /* Close button hover effect */
+        .popup-overlay .close-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Display popup when checked */
+        #popup-toggle:checked ~ .popup-overlay {
+            display: flex;
+        }
+
+
+        /* Popup Image 2 RGBA */
+
+    /* Thumbnail image styling */
+        .popup-thumbnail-rgba {
+            width: 70%;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border-radius: 8px;
+        }
+
+        /* Slight zoom effect on hover */
+        .popup-thumbnail-rgba:hover {
+            transform: scale(1.05);
+        }
+
+        /* Popup overlay styling */
+        .popup-overlay-rgba {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* Popup image styling */
+        .popup-overlay-rgba img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Close button styling */
+        .popup-overlay-rgba .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            transition: background 0.3s;
+        }
+
+        /* Close button hover effect */
+        .popup-overlay-rgba .close-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Display popup when checked */
+        #popup-toggle-rgba:checked ~ .popup-overlay-rgba {
+            display: flex;
+        }
+
+
+                /* Popup Image 3 RGBA LDM*/
+
+    /* Thumbnail image styling */
+        .popup-thumbnail-ldm {
+            width: 70%;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border-radius: 8px;
+        }
+
+        /* Slight zoom effect on hover */
+        .popup-thumbnail-ldm:hover {
+            transform: scale(1.05);
+        }
+
+        /* Popup overlay styling */
+        .popup-overlay-ldm {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* Popup image styling */
+        .popup-overlay-ldm img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Close button styling */
+        .popup-overlay-ldm .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            transition: background 0.3s;
+        }
+
+        /* Close button hover effect */
+        .popup-overlay-ldm .close-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Display popup when checked */
+        #popup-toggle-ldm:checked ~ .popup-overlay-ldm {
+            display: flex;
+        }
+
+
+                      /* Popup Image 5 RGBA Samples*/
+
+    /* Thumbnail image styling */
+        .popup-thumbnail-rgba-samples {
+            width: 70%;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border-radius: 8px;
+        }
+
+        /* Slight zoom effect on hover */
+        .popup-thumbnail-rgba-samples:hover {
+            transform: scale(1.05);
+        }
+
+        /* Popup overlay styling */
+        .popup-overlay-rgba-samples {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* Popup image styling */
+        .popup-overlay-rgba-samples img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Close button styling */
+        .popup-overlay-rgba-samples .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            transition: background 0.3s;
+        }
+
+        /* Close button hover effect */
+        .popup-overlay-rgba-samples .close-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Display popup when checked */
+        #popup-toggle-rgba-samples:checked ~ .popup-overlay-rgba-samples {
+            display: flex;
+        }
+
+
+
+                              /* Popup Image 6 Noise*/
+
+    /* Thumbnail image styling */
+        .popup-thumbnail-noise {
+            width: 70%;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border-radius: 8px;
+        }
+
+        /* Slight zoom effect on hover */
+        .popup-thumbnail-noise:hover {
+            transform: scale(1.05);
+        }
+
+        /* Popup overlay styling */
+        .popup-overlay-noise {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* Popup image styling */
+        .popup-overlay-noise img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Close button styling */
+        .popup-overlay-noise .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            transition: background 0.3s;
+        }
+
+        /* Close button hover effect */
+        .popup-overlay-noise .close-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Display popup when checked */
+        #popup-toggle-noise:checked ~ .popup-overlay-noise {
+            display: flex;
+        }
+
+
+                                      /* Popup Image 7 Scenes */
+
+    /* Thumbnail image styling */
+        .popup-thumbnail-scenes {
+            width: 70%;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border-radius: 8px;
+        }
+
+        /* Slight zoom effect on hover */
+        .popup-thumbnail-scenes:hover {
+            transform: scale(1.05);
+        }
+
+        /* Popup overlay styling */
+        .popup-overlay-scenes {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* Popup image styling */
+        .popup-overlay-scenes img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Close button styling */
+        .popup-overlay-scenes .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            transition: background 0.3s;
+        }
+
+        /* Close button hover effect */
+        .popup-overlay-scenes .close-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Display popup when checked */
+        #popup-toggle-scenes:checked ~ .popup-overlay-scenes {
+            display: flex;
+        }
+
+/* Popup Image 8 Edit */
+
+    /* Thumbnail image styling */
+        .popup-thumbnail-edit {
+            width: 70%;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border-radius: 8px;
+        }
+
+        /* Slight zoom effect on hover */
+        .popup-thumbnail-edit:hover {
+            transform: scale(1.05);
+        }
+
+        /* Popup overlay styling */
+        .popup-overlay-edit {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* Popup image styling */
+        .popup-overlay-edit img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Close button styling */
+        .popup-overlay-edit .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            transition: background 0.3s;
+        }
+
+        /* Close button hover effect */
+        .popup-overlay-edit .close-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Display popup when checked */
+        #popup-toggle-edit:checked ~ .popup-overlay-edit {
+            display: flex;
+        }
